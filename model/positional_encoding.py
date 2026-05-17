@@ -36,3 +36,8 @@ class PositionalEncoding(nn.Module):
         seq_len = x.size(1)
         x = x + self.pe[:, :seq_len, :]
         return self.dropout(x)
+
+
+# Notes : 
+# Because embeddings are vectors.
+# We need positional information also as vectors of size d_model.
